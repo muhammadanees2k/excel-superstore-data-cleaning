@@ -45,18 +45,10 @@ To clean the store dataset and prepare it for further analysis.
 ---
 
 ### 5. Convert Negative Values in the Profit Column
-- Some values in the **Profit** column are enclosed in round brackets (e.g., `(500)`), indicating negative values in accounting format.
-- To convert them to actual negative numbers, use the following formula in a new column:
-
-    ```excel
-    =IF(LEFT(U2,1)="(", -SUBSTITUTE(SUBSTITUTE(U2,"(",""),")",""), U2)
-    ```
-
-- After applying the formula:
-  - Copy the new column.
-  - Use **Paste Values** to remove the formula.
-  - Delete the original **Profit** column.
-  - Rename the new column back to **Profit**.
+- Some values are negative but shows in brackets
+  - open Number tab.
+  - Select Currency option from left menu.
+  - select negative value format with '-' sign.
 
 ![Profit Column Cleaned](Images/after_cleaning_one.png)
 
